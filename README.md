@@ -1,9 +1,9 @@
-#Proof of Concept: ETL Pipeline on Databricks
-#Overview
+### Proof of Concept: ETL Pipeline on Databricks
+### Overview
 
 This repository demonstrates a Proof of Concept (POC) for building an end-to-end ETL pipeline on Databricks using Delta Lake. The pipeline ingests deeply nested JSON data, applies transformations, and implements Slowly Changing Dimension (SCD) Type 2 logic before aggregating into a Gold layer.
 
-#Objectives
+### Objectives
 
 Ingest deeply nested JSON files from multiple source folders in Databricks Volumes.
 
@@ -17,7 +17,7 @@ Implement SCD Type 2 logic to track historical changes.
 
 Aggregate curated data into a Gold layer Delta table for downstream analytics.
 
-#Architecture
+### Architecture
 
 ###   1.Bronze Layer
 
@@ -25,7 +25,7 @@ Raw ingestion of JSON files from 3 source folders in Databricks Volumes.
 
 Stored as Delta tables for schema inference and reliability.
 
-###2.Silver Layer
+### 2.Silver Layer
 
 Explode nested JSON structures.
 
@@ -35,7 +35,7 @@ Column extraction based on mapping defined in Excel.
 
 Conformance applied to ensure standardized schema.
 
-###3.Gold Layer
+### 3.Gold Layer
 
 Implementation of SCD Type 2 for dimension tables.
 
@@ -43,7 +43,7 @@ Aggregations on curated data for analytics and reporting.
 
 Optimized Delta tables ready for BI consumption.
 
-# ###Tech Stack
+ ###Tech Stack
 
 Databricks (Spark + Delta Lake)
 
@@ -53,7 +53,7 @@ Excel Mapping Sheet (to define column extraction paths)
 
 Delta Tables (Bronze, Silver, Gold layers)
 
-# Data Flow
+### Data Flow
 
 ### Source → Bronze:
 
